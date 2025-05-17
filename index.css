@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 343 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+    
+    /* Custom colors for Catmunitty */
+    --cream: 39 100% 95%;
+    --cream-dark: 39 79% 93%;
+    --dark: 0 0% 7%;
+    --dark-lighter: 0 0% 18%;
+    --dark-medium: 0 0% 29%;
+    --accent-orange: 38 100% 50%;
+    --accent-green: 153 75% 53%;
+    
+    /* Chart colors */
+    --chart-1: 343 84% 65%;
+    --chart-2: 38 100% 50%;
+    --chart-3: 153 75% 53%;
+    --chart-4: 240 5% 64.9%;
+    --chart-5: 273 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-dark text-cream font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+  
+  .container {
+    @apply px-4;
+  }
+}
+
+@layer components {
+  .campaign-card:hover .card-hover-content {
+    opacity: 1;
+  }
+  
+  .progress-bar {
+    @apply relative h-2 bg-primary/20 rounded-full overflow-hidden;
+  }
+  
+  .progress-bar-fill {
+    @apply absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-500;
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
