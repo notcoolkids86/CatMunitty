@@ -1,0 +1,13 @@
+Assistant checkpoint: Add SPA redirect configuration and suggest Replit deployment
+
+Assistant generated file changes:
+- netlify.toml: Add SPA redirect configuration
+
+---
+
+User prompt:
+
+saya sudah deploy ke netlify tapi page not found
+
+Replit-Commit-Author: Assistant
+Replit-Commit-Session-Id: ffa8b9cc-551b-4940-bdb9-fd9b2d9d0733
